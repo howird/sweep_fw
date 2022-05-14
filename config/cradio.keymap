@@ -22,38 +22,38 @@
         keymap {
                 compatible = "zmk,keymap";
                 
-       		DEF {
+       		default_layer {
 		bindings = <
-		&kp Q     &kp W      &kp E      &kp R       &kp T 			&kp Y &kp U      &kp I      &kp O         &kp P 
-		&lt TWO A &mt LGUI S &mt LALT D &mt LCTL F  &kp G 			&kp H &mt RCTL J &mt RALT K &mt RGUI L    &lt TWO SC
-		&kp Z     &lt FOUR X &kp C      &kp V       &kp B			&kp N &kp M      &kp CMMA   &lt FOUR DOT  &kp FSLH
-          				      &bhm LSHFT TAB  &kp BSPC  	      &kp SPC &lt ONE RET
+		&kp Q    &kp W      &kp E      &kp R       &kp T 			&kp Y &kp U       &kp I      &kp O       &kp P 
+		&lt 2 A  &mt LGUI S &mt LALT D &mt LCTRL F  &kp G 			&kp H &mt RCTRL J &mt RALT K &mt RGUI L  &lt 2 SEMI
+		&kp Z    &lt 4    X &kp C      &kp V       &kp B			&kp N &kp M       &kp CMMA   &lt 4 DOT   &kp FSLH
+          				    &mt LSHFT TAB  &kp BSPC		      &kp SPC &lt 1 RET
 		>;
 		};
 
-       		ONE {
+       		left_layer {
 		bindings = <
-		&kp STAR  &kp KP_N7   &kp N8      &kp N9      &kp PLUS 			&none      &none     &kp UP    &none      &kp PIPE
-		&kp FSLH  &mt LGUI N4 &mt LALT N5 &mt LCTL N6 &kp MINUS 		&kp ESC    &kp LEFT  &kp DOWN  &kp RIGHT  &kp FLSH
-		&kp N0    &kp N1      &kp N2      &kp N3      &kp EQUAL			&none      &none     &none     &none      &none
-          				     	  &kp LSHFT   &kp DELETE  		&kp UNDER  &mo ONE
+		&kp STAR  &kp KP_N7   &kp N8      &kp N9       &kp PLUS 		&none      &none     &kp UP    &none      &kp PIPE
+		&kp FSLH  &mt LGUI N4 &mt LALT N5 &mt LCTRL N6 &kp MINUS 		&kp ESC    &kp LEFT  &kp DOWN  &kp RIGHT  &kp FLSH
+		&kp N0    &kp N1      &kp N2      &kp N3       &kp EQUAL		&none      &none     &none     &none      &none
+          				     	  &kp LSHFT    &kp DELETE  		&kp UNDER  &mo 1
 		>;
 		};
 		
-		TWO {
+		right_layer {
 		bindings = <
 		&kp none  &kp TILDE &kp AT    &kp DLLR  &kp GRAVE    			&none      &kp STAR  &kp CARET &none     &kp PIPE 
-		&mo TWO   &kp EXCL  &kp LBRC  &kp RBRC  &kp SQT 			&kp DQT    &kp LPAR  &kp RPAR  &kp AMPS  &kp FLSH
+		&mo 2     &kp EXCL  &kp LBRC  &kp RBRC  &kp SQT 			&kp DQT    &kp LPAR  &kp RPAR  &kp AMPS  &kp FLSH
 		&none     &kp none  &kp LBKT  &kp RBKT  &kp HASH    			&kp PRCNT  &kp LT    &kp GT    &none     &none
-					      &kp LSFT  &kp DELETE  			&kp UNDER  &mo ONE 
+					      &kp LSFT  &kp DELETE  			&kp UNDER  &mo 1 
 		>;
 		};	
 		
-		FOUR {
+		tri_layer {
 		bindings = <
 		&kp HOME  &kp F7   &kp F8   &kp F9   &kp F10 				&none     &none       &kp K_VOL_UP  &none       &kp PG_UP
 		&kp END   &kp F2   &kp F3   &kp F4   &kp F11 				&none     &kp K_PREV  &kp K_VOL_DN  &kp K_NEXT  &kp PG_DN 
-		&bt INS   &bt F1   &bt F2   &kp F3   &kp F12  				&none     &none       &kp K_MUTE    &mo FOUR    &none
+		&bt INS   &bt F1   &bt F2   &kp F3   &kp F12  				&none     &none       &kp K_MUTE    &mo 3       &none
 					    &none    &none  				&kp K_PP  &none 
 		>;
 		};
