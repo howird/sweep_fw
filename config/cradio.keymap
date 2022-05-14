@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF  0
+#define ONE  1
+#define TWO  2
+#define FOUR 3
+
 &mt {
 	flavor = "tap-preferred";
 	tapping_term_ms = <200>;
@@ -17,10 +22,10 @@
         keymap {
                 compatible = "zmk,keymap";
                 
-       		default_layer {
+       		DEF {
 		bindings = <
 		&kp Q     &kp W      &kp E      &kp R       &kp T 			&kp Y &kp U      &kp I      &kp O         &kp P 
-		&lt TWO A &mt LGUI S &mt LALT D &mt LCTL F &kp G 			&kp H &mt RCTL J &mt RALT K &mt RGUI L   &lt TWO SC
+		&lt TWO A &mt LGUI S &mt LALT D &mt LCTL F  &kp G 			&kp H &mt RCTL J &mt RALT K &mt RGUI L    &lt TWO SC
 		&kp Z     &lt FOUR X &kp C      &kp V       &kp B			&kp N &kp M      &kp CMMA   &lt FOUR DOT  &kp FSLH
           				      &bhm LSHFT TAB  &kp BSPC  	      &kp SPC &lt ONE RET
 		>;
@@ -31,7 +36,7 @@
 		&kp STAR  &kp KP_N7   &kp N8      &kp N9      &kp PLUS 			&none      &none     &kp UP    &none      &kp PIPE
 		&kp FSLH  &mt LGUI N4 &mt LALT N5 &mt LCTL N6 &kp MINUS 		&kp ESC    &kp LEFT  &kp DOWN  &kp RIGHT  &kp FLSH
 		&kp N0    &kp N1      &kp N2      &kp N3      &kp EQUAL			&none      &none     &none     &none      &none
-          				     	    &kp LSHFT    &kp DELETE  		&kp UNDER  &mo ONE
+          				     	  &kp LSHFT   &kp DELETE  		&kp UNDER  &mo ONE
 		>;
 		};
 		
